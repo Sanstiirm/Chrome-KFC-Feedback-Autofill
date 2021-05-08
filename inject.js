@@ -6,8 +6,8 @@
         var input = inputs[i];
         switch ( input.id )
         {
-            case 'InputStoreNum': input.value=9832; continue;
-            case 'InputTransactionNum': input.value=1001; continue;
+            case 'InputStoreNum': input.value=1431; continue;
+            case 'InputTransactionNum': input.value=130318; continue;
             case 'InputDay': input.value=padLeft((new Date).getDate(), 2); continue;
             case 'InputMonth': input.value=padLeft((new Date).getMonth()+1, 2); continue;
             case 'InputYear': input.value=(new Date).getFullYear().toString().substring(2); continue;
