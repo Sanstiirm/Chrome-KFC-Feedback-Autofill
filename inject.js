@@ -1,3 +1,5 @@
+// Conditions Apply, To receive validation code make a purchase, retain receipt from your KFC purchase and complete the online survey within 3 days of purchase. To redeem, print/write down validation code on the original KFC receipt and show to staff at the KFC restaurant. Spend $4.95 in 1 transaction on your next purchase to redeem regular chips and drink. Spend $19.95 in 1 transaction on your next purchase to redeem large chips and drink. Max. of 1 validation per transaction. Validation code valid for 14 days from date of issue. Not valid with any other offer.
+
 (function () {
     // First page
     var inputs = document.querySelectorAll("#surveyEntryForm input, #surveyEntryForm select");
