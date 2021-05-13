@@ -3,9 +3,8 @@
 (function () {
     // First page
     var inputs = document.querySelectorAll("#surveyEntryForm input, #surveyEntryForm select");
-    for ( i = 0; i < inputs.length; i++ )
+    for ( let input of inputs )
     {
-        var input = inputs[i];
         switch ( input.id )
         {
             case 'InputStoreNum': input.value=1431; continue;
@@ -16,22 +15,19 @@
             case 'InputHour': input.value='01'; continue;
             case 'InputMinute': input.value='01'; continue;
             case 'InputMeridian': input.value='AM'; continue;
-            case 'InputTransactionNum': input.value=1001; continue;
         }
     }
 
     // Next pages
     var rows = document.querySelectorAll("#surveyForm TR, #surveyForm .inputtyperblv");
-    for ( i = 0; i < rows.length; i++ )
+    for ( let row of rows )
     {
-        var inputs = rows[i].querySelectorAll('input[type=radio]');
+        var inputs = row.querySelectorAll('input[type=radio]');
         if ( inputs.length )
         {
             // These are the 'Would you like to recognise someone' and 'Would you be interested in signing up' checkbox. Say no to avoid extra steps.
-            if ( inputs[0].name == 'R038000' || inputs[0].name == 'R048000' )
-                inputs[1].checked = true;
-            else
-                inputs[0].checked = true;
+            let targ = inputs[0].name in [ 'R038000', 'R048000' ] ? 1 : 0;
+            inputs[targ].checked = true;
         }
     }
 
