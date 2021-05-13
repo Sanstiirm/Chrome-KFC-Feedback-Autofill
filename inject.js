@@ -26,8 +26,10 @@
         if ( inputs.length )
         {
             // These are the 'Would you like to recognise someone' and 'Would you be interested in signing up' checkbox. Say no to avoid extra steps.
-            let targ = inputs[0].name in [ 'R038000', 'R048000' ] ? 1 : 0;
+
+            let targ = [ 'R038000', 'R048000' ].includes(inputs[0].name) ? 1 : 0;
             inputs[targ].checked = true;
+
         }
     }
 
